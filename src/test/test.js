@@ -46,7 +46,7 @@ function threeWayFibonacci(n) {
 
   console.log('Regular Recursive (' + n + '): \t' + results.recursive + ' microseconds');
   console.log('Regular Iterative (' + n + '): \t' + results.iterative + ' microseconds');
-  console.log('Cached Iterative (' + n + '): \t' + results.cached + ' microseconds');
+  console.log('Cached Iterative  (' + n + '): \t' + results.cached + ' microseconds');
 
   return results;
 }
@@ -65,7 +65,7 @@ function evaluate(results, size) {
     chai.expect(results.cached).to.be.below(results.recursive);
     console.log('\n\tFastest ' + size + ' implementation: Cached Iterative\n');
   } else {
-    console.log('\n\tUnable to determine winner--the fastest tests are equally fast\n');
+    console.log('\n\tUnable to determine ' + size  + ' winner--the fastest tests are equally fast\n');
   }
 }
 
@@ -97,6 +97,7 @@ describe('Fibonacci performance test', function () {
   });
 
   it('should determine the fastest implementation of a large (45) fibonacci sequence', function () {
+    this.timeout(20000);// Allow tests 20 seconds to complete
     evaluate(threeWayFibonacci(45), 'large');
   });
 });
