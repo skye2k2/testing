@@ -1,44 +1,32 @@
 {
-  "name": "karma-mocha-chai",
+  "name": "testing",
   "version": "0.0.1",
   "description": "Skeleton project structure for using karma, mocha, and chai.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
+  "clonedFrom": {
     "type": "git",
     "url": "https://github.com/zpratt/karma-mocha-chai.git"
   },
-  "keywords": [
-    "karma",
-    "mocha",
-    "chai"
-  ],
-  "author": "Zach Pratt",
-  "license": "Apache",
-  "bugs": {
-    "url": "https://github.com/zpratt/karma-mocha-chai/issues"
-  },
   "devDependencies": {
-    "karma": "~0.10.8",
-    "karma-script-launcher": "~0.1.0",
-    "karma-chrome-launcher": "~0.1.1",
+    "chai": "~3.5.0",
+    "karma": "~0.13.22",
+    "karma-chai-sinon": "~0.1.5",
+    "karma-chrome-launcher": "~0.2.3",
+    "karma-coffee-preprocessor": "~0.3.0",
+    "karma-coverage": "~0.5.5",
+    "karma-firefox-launcher": "~0.1.7",
     "karma-html2js-preprocessor": "~0.1.0",
-    "karma-firefox-launcher": "~0.1.2",
-    "karma-safari-launcher": "~0.1.1",
     "karma-jasmine": "~0.1.4",
+    "karma-mocha": "~0.2.2",
+    "karma-phantomjs-launcher": "~1.0.1",
+    "karma-script-launcher": "~0.2.0",
+    "mocha": "~2.4.5",
     "requirejs": "~2.1.9",
-    "karma-requirejs": "~0.2.0",
-    "karma-coffee-preprocessor": "~0.1.1",
-    "karma-phantomjs-launcher": "~0.1.1",
-    "mocha": "~1.15.1",
-    "karma-mocha": "~0.1.1",
-    "karma-chai": "0.0.2",
-    "karma-sinon": "~1.0.0",
-    "chai": "1.6.x",
     "expect.js": "^0.2.0",
-    "should": "^2.1.1",
-    "sinon": "1.4.x"
+    "should": "^3.3.1",
+    "sinon": "^1.17.3"
+  },
+  "scripts": {
+    "test": "bash ./bin/tests"
   }
 }

@@ -1,4 +1,6 @@
-karma-mocha-chai
+Performance Testing
 ================
 
-Skeleton setup for a bare project using karma with mocha and chai.
+Tests the performance of three variations of the fibonacci sequence for a range of iterations, across Chrome, Firefox, and PhantomJS.
+
+Run tests from root via: `./node_modules/.bin/karma start ./karma.conf.js --single-run` or `npm test`
